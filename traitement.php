@@ -69,8 +69,8 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
-    $mail->setFrom('contact@webprime.fr', 'Absorbex 77');
-    $mail->addAddress('info.assainissement@gmail.com');
+    $mail->setFrom('contact@webprime.fr', 'Art Clean ');
+    $mail->addAddress('art.clean06@gmail.com');
     $mail->addAddress('webprime91@hotmail.com');
     $mail->CharSet = 'UTF-8';
     $mail->isHTML(true);
@@ -80,7 +80,7 @@ try {
 
     $mail->send();
 
-    header('Location: https://assainissement-77.fr/');
+    header('Location: https://entreprise-de-nettoyage-06.fr/');
     exit();
 } catch (Exception $e) {
     echo "Message non envoyé. Erreur Mailer: {$mail->ErrorInfo}";
