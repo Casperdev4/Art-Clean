@@ -352,15 +352,6 @@
                 Dimanche : 07h - 17h30 <br><br>
                 Adresse : 73 Chemin du Val Fleuri, 06800 Cagnes-sur-Mer
             </p>
-            <h5>NOS RÉSEAUX SOCIAUX</h5>
-            <div class="reseau-contact">
-                <a href="https://fr.linkedin.com/in/" target="_blank" title="linkedin-assainissement"> Linkedin -</a>
-                <a href="https://www.instagram.com/" target="_blank" title="instagram-assainissement"> Instagram -</a>
-                <a href="https://www.snapchat.com/" target="_blank" title="snapchat-assainissement">
-                    Snapchat -</a>
-                <a href="https://www.facebook.com/" target="_blank" title="facebook-assainissement">
-                    Facebook</a>
-            </div>
             <h5>CONTACTEZ - NOUS</h5>
             <p class="liens">Tel : <a href="tel:+33648492910" target="_blank"
                     title="entreprise de nettoyage Vallauris">06 48 49 29 10</a></p>
@@ -375,16 +366,6 @@
         </div>
         <div class="contact-icon"><a href="tel:+33648492910" title="nettoyage fin de chantier prix">06 48 49 29 10</a></div>
     </footer>
-    <script>
-        const list = document.querySelectorAll('.list');
-        function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('active'));
-            this.classList.add('active');
-        }
-        list.forEach((item) =>
-            item.addEventListener('mouseover', activeLink));
-    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var menuToggle = document.getElementById("btn");
@@ -418,36 +399,6 @@
                 observer.observe(element);
             });
         });
-    </script>
-    <script>
-        function validateForm() {
-            var name = document.getElementById("name").value.trim();
-            var tel = document.getElementById("tel").value.trim();
-            var email = document.getElementById("email").value.trim();
-            var services = document.getElementById("services").value.trim();
-            var comments = document.getElementById("comments").value.trim();
-            if (name === "" || tel === "" || email === "" || services === "" || comments === "" || comments === "") {
-                alert("Champs obligatoires.");
-                return false;
-            }
-            var telPattern = /^(01|09|06|07|\+336|\+337)\d{8}$/;
-            if (!telPattern.test(tel)) {
-                alert("Veuillez entrer un numéro de téléphone valide.");
-                return false;
-            }
-            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email)) {
-                alert("Veuillez entrer une adresse email valide.");
-                return false;
-            }
-            var linkPattern = /https?:\/\/[^\s]+|<a\s+href\s*=\s*['"][^\s>]+['"]/i;
-            var scriptPattern = /<script[^>]*>[\s\S]*?<\/script>/gi;
-            if (linkPattern.test(comments) || scriptPattern.test(comments)) {
-                alert("Pas autorisé.");
-                return false;
-            }
-            return true;
-        }
     </script>
 </body>
 
