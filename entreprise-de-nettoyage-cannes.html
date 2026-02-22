@@ -176,6 +176,9 @@
                     <a href="entreprise-de-menage-06.html" class="nav-link" title="entreprise de nettoyage 06 Alpes-Maritimes">L'entreprise</a>
                 </li>
                 <li class="nav-item">
+                    <a href="prix-entreprise-de-nettoyage-06.html" class="nav-link" title="devis gratuit nettoyage 06">Devis</a>
+                </li>
+                <li class="nav-item">
                     <a href="tel:+33648492910" class="nav-link nav-cta" title="devis nettoyage immeuble Alpes-Maritimes">06 48 49 29 10</a>
                 </li>
             </ul>
@@ -194,6 +197,44 @@
             <a class="bouton1" href="tel:+33648492910" title="lavage de vitres prix">DEVIS
                 GRATUIT</a>
         </div>
+                <section>
+            <h2>DEVIS GRATUIT</h2>
+            <div class="formullaire">
+                <div class="image-container">
+                    <img src="logo/art-clean.webp" alt="entreprise de nettoyage 06 Alpes-Maritimes">
+                </div>
+                <form id="contactForm" onsubmit="return submitToWebPrime(event)">
+                    <div class="hp-wrap">
+                        <label for="website">Votre site web :</label>
+                        <input type="text" id="website" name="_gotcha" autocomplete="off">
+                    </div>
+                    <input type="hidden" name="_captcha" value="true">
+
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="nom" required>
+
+                    <label for="tel">Telephone :</label>
+                    <input type="tel" id="tel" name="tel" pattern="^((+33|0)[1679])[0-9]{8}$" maxlength="12" required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="services">Services :</label>
+                    <select id="services" name="services" required>
+                        <option value="NETTOYAGE DE VITRES">NETTOYAGE DE VITRES</option>
+                        <option value="NETTOYAGE FIN DE CHANTIER">NETTOYAGE FIN DE CHANTIER</option>
+                        <option value="NETTOYAGE COPROPRIETE">NETTOYAGE COPROPRIETE</option>
+                        <option value="ENTRETIEN REGULIER">ENTRETIEN REGULIER</option>
+                        <option value="AUTRE">AUTRE</option>
+                    </select>
+
+                    <label for="comments">Commentaires :</label>
+                    <textarea id="comments" name="commentaires" rows="4"></textarea>
+
+                    <button type="submit">ENVOYER</button>
+                </form>
+            </div>
+        </section>
         <h2 id="prestation">NOS SERVICES</h2>
         <div class="aaaaaamobile">
             <section>
@@ -373,6 +414,36 @@
                 navMenu.classList.remove('active');
             });
         });
+    </script>
+    <script>
+        async function submitToWebPrime(e) {
+            e.preventDefault();
+            var form = document.getElementById('contactForm');
+            var btn = form.querySelector('button[type="submit"]');
+            var originalText = btn.textContent;
+            if (form._gotcha && form._gotcha.value) return false;
+            btn.textContent = 'Envoi en cours...';
+            btn.disabled = true;
+            try {
+                var formData = new FormData(form);
+                var response = await fetch('https://webprime.app/webhook/contact/4b27ef34a5bd209a5689091cc0f4c2bda62ee92262feef32809d1b57b801d5d3', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (response.ok) {
+                    window.location.href = 'https://entreprise-nettoyage-06.fr/';
+                } else {
+                    alert("Erreur lors de l'envoi. Veuillez reessayer.");
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }
+            } catch (error) {
+                alert('Erreur de connexion. Veuillez reessayer.');
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+            return false;
+        }
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
