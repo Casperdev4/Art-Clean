@@ -8,7 +8,6 @@ hr {width: 20%;margin-left: auto;margin-right: auto;height: 6px;background: #a32
 .histoire h4,.histoire p{color:#fff}
 #devis{background-color:#222;padding:2%;width:50%;margin:10% auto}#devis h2,#devis h3,#devis p{color:#fff}#devis p{text-align:left}
 .valeur h3,.valeur h4{margin-bottom:0;color:#fff;text-align:left}.valeur h3,.valeur h4,.valeur p{text-align:left}.valeur{background-color:#222;width:100%;margin-left:auto;margin-right:auto;opacity:0;transform:translateX(-50%);transition:opacity .5s,transform 1s}.valeur.slide-in-done{opacity:1;transform:translateX(0)}.valeur .confiance{display:flex;align-items:center;margin-top:5%;margin-left:2%;font-size:35px;text-align:left}.valeur h3{display:flex;align-items:center;font-size:30px}.valeur h4{font-size:20px;margin-top:3%}.valeur p{margin-left:0;color:#fff;font-size:16px;margin-top:0}
-/* Navigation Desktop & Mobile */
 *{box-sizing:border-box;outline:0;margin:0;padding:0}
 .navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:#fff;position:fixed;top:0;left:0;right:0;z-index:1000;box-shadow:0 2px 15px rgba(0,0,0,0.1)}
 .nav-logo img{height:60px;width:auto;transition:transform 0.3s ease}
@@ -42,7 +41,6 @@ hr {width: 20%;margin-left: auto;margin-right: auto;height: 6px;background: #a32
 .liens-wp a,.liens-wp h6{font-size:13px;color:#fff;text-align:center;font-weight:300;margin-top:3%}
 .contact-icon,.aaaaaamobile,.partenaires,.realisation{display:none}
 
-/* FAQ Section - CSS Only */
 .faq-section{background-color:#f5f5f5;padding:2% 5% 5% 5%;margin:5% 0 0 0}
 .faq-section h2{color:#222;margin-bottom:5%}
 .faq-container{max-width:900px;margin:0 auto}
@@ -57,14 +55,12 @@ hr {width: 20%;margin-left: auto;margin-right: auto;height: 6px;background: #a32
 .faq-answer p{padding:20px 25px;margin:0;font-size:16px;line-height:1.7;color:#444}
 .faq-item input[type="checkbox"]:checked ~ .faq-answer{max-height:500px}
 
-/*  Small device */
 @media screen and (max-width:767.98px) {
 
   h1,h2{color:#222}h4,p{color:#222;text-align:center}h2,h3,h4,p{text-align:center}h1{font-weight:550;font-size:28px;margin-bottom:-2%;margin-top:5%;text-align: left;}h2{margin-top:10%;margin-bottom:10%;font-size:28px;font-weight:530}h3{font-weight:200;font-size:17px;margin:3% 3% 7%}h4{margin:5% 3%;font-size:20px;font-weight:350}p{font-size:19px;margin-left:5%;margin-right:5%;padding:2%}
   hr {width: 40%;margin-bottom: 2%;}
   #devis p,.histoire p,.valeur p{color:#fff;font-size:17px}
   body{margin-top:18%}
-  /* Navigation Mobile */
   .navbar{padding:12px 4%}
   .nav-logo img{height:50px}
   .nav-menu{position:fixed;top:0;right:-100%;width:75%;height:100vh;background:linear-gradient(180deg,#fff 0%,#f8f8f8 100%);flex-direction:column;justify-content:flex-start;align-items:center;gap:0;padding:100px 0 0;transition:right 0.4s cubic-bezier(0.4,0,0.2,1);box-shadow:-5px 0 30px rgba(0,0,0,0.15)}
@@ -96,7 +92,6 @@ hr {width: 20%;margin-left: auto;margin-right: auto;height: 6px;background: #a32
   .formullaire{display:flex;flex-direction:column;align-items:center;margin:5% auto;width:90%;padding:20px;box-shadow:0 0 10px rgba(0,0,0,.1);color:#fff}.image-container{background-color:#fff;padding:1%;margin-left:25%;margin-right:25%;margin-bottom:20px;border-radius:20px}.image-container img{width:100%;height:auto;border-radius:20px}.formullaire label{display:block;margin-bottom:8px;margin-left:2%;font-size:20px}.formullaire input,.formullaire select{width:100%;height:35px;padding:8px;margin-bottom:16px;box-sizing:border-box}.formullaire button{display:flex;justify-content:center;padding:10px 40px;font-size:18px;margin:3% auto 2%;border:none;border-radius:4px;cursor:pointer;border: 1px solid #fff}.formullaire button:hover{background-color:#b1a081}form {width: 95%;}
   .reseau-contact{text-align:center;margin-bottom:13%}.reseau-contact a{font-size:13px;color:#fff}.reseau-contact ion-icon{font-size:16px}
   .partenaires-pc,.realisation-pc,.aaaaaapc,.aaaaaapc2{display:none}
-  /* FAQ Mobile */
   .faq-section{padding:10% 3%;margin:10% 0 0 0}
   .faq-section h2{font-size:22px;margin-bottom:8%}
   .faq-question{font-size:16px;padding:15px 18px}
